@@ -1,0 +1,144 @@
+
+____________________________________________________________________________________________________
+Three Address Code:
+____________________________________________________________________________________________________
+
+L0: view: 
+L1:     param t0
+L2:     param grades
+L3:     t1 = call printf, 2
+L4:     param t2
+L5:     t3 = call printf, 1
+
+L6: Pass_count: 
+L7:     t0 = 2
+L8:     i = t0
+L9:     t1 = 0
+L10:     passes = t1
+L11:     t2 = 'a'
+L12:     a = t2
+L13:     t3 = 10
+L14:     t4 = 1
+L15:     t5 = passes + t4
+L16:     t6 = t5 * 4
+L17:     t7 = 15
+L18:     arr[t6] = t7
+L19:     t9 = 2.3
+L20:     x = t9
+L21:     t10 = x + i
+L22:     passes = t10
+L23:     if grades >= value goto 26
+L24:     goto 29
+L25:     goto 29
+L26:     t12 = passes
+L27:     passes = passes + 1
+L28:     goto 29
+L29:     return passes
+
+L30: main: 
+L31:     t0 = 10
+L32:     grades = t0
+L33:     param grades
+L34:     t1 = 10
+L35:     param t1
+L36:     t2 = call view, 2
+L37:     param grades
+L38:     t3 = 10
+L39:     param t3
+L40:     t4 = 70
+L41:     param t4
+L42:     t5 = call Pass_count, 3
+L43:     result = t5
+L44:     t7 = 1
+L45:     if result == t7 goto 48
+L46:     goto 52
+L47:     goto 55
+L48:     param t8
+L49:     param result
+L50:     t9 = call printf, 2
+L51:     goto 55
+L52:     param t10
+L53:     param result
+L54:     t11 = call printf, 2
+L55:     t12 = 0
+L56:     return t12
+____________________________________________________________________________________________________
+____________________________________________________________________________________________________
+Table Name: Global			 Parent Name: NULL
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+view           void                -                   0              0              view
+Pass_count     int                 -                   4              0              Pass_count
+main           int                 -                   4              4              main
+----------------------------------------------------------------------------------------------------
+
+____________________________________________________________________________________________________
+Table Name: view			 Parent Name: Global
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+grades         int                 -                   4              0              NULL
+elements       int                 -                   4              4              NULL
+printf         int                 -                   4              8              NULL
+t0             ptr(char)           "%d "               4              12             NULL
+t1             int                                     4              16             NULL
+t2             ptr(char)           "\n"                4              20             NULL
+t3             int                                     4              24             NULL
+----------------------------------------------------------------------------------------------------
+
+____________________________________________________________________________________________________
+Table Name: Pass_count			 Parent Name: Global
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+grades         int                 -                   4              0              NULL
+elements       int                 -                   4              4              NULL
+value          int                 -                   4              8              NULL
+return         int                 -                   4              12             NULL
+i              int                 2                   4              16             NULL
+t0             int                 2                   4              20             NULL
+passes         int                 0                   4              24             NULL
+t1             int                 0                   4              28             NULL
+a              char                'a'                 1              32             NULL
+t2             char                'a'                 1              33             NULL
+arr            arr(10,int)         -                   40             34             NULL
+t3             int                 10                  4              74             NULL
+t4             int                 1                   4              78             NULL
+t5             int                                     4              82             NULL
+t6             int                                     4              86             NULL
+t7             int                 15                  4              90             NULL
+t8             int                                     4              94             NULL
+x              int                 2.3                 4              98             NULL
+t9             float               2.3                 8              102            NULL
+t10            int                                     4              110            NULL
+t11            int                                     4              114            NULL
+t12            int                                     4              118            NULL
+----------------------------------------------------------------------------------------------------
+
+____________________________________________________________________________________________________
+Table Name: main			 Parent Name: Global
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+return         int                 -                   4              0              NULL
+grades         int                 10                  4              4              NULL
+t0             int                 10                  4              8              NULL
+result         int                 -                   4              12             NULL
+view           int                 -                   4              16             NULL
+t1             int                 10                  4              20             NULL
+t2             int                                     4              24             NULL
+Pass_count     int                 -                   4              28             NULL
+t3             int                 10                  4              32             NULL
+t4             int                 70                  4              36             NULL
+t5             int                                     4              40             NULL
+t6             int                                     4              44             NULL
+t7             int                 1                   4              48             NULL
+printf         int                 -                   4              52             NULL
+t8             ptr(char)           "There was %d pass.\n"4              56             NULL
+t9             int                                     4              60             NULL
+t10            ptr(char)           "There were %d passes.\n"4              64             NULL
+t11            int                                     4              68             NULL
+t12            int                 0                   4              72             NULL
+----------------------------------------------------------------------------------------------------
+
